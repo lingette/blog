@@ -1,0 +1,37 @@
+<div class="container">
+        <h1>user list</h1> 
+        <a class="btn btn-primary mb-3 <?=($menu =='liste')?'active':' '?>" href="addUser.php" role="button">add user</a>
+    
+<table class="table table-dark">
+    <thead class="thead-dark"">
+    <tr>
+      <th scope="col">idusers</th>
+      <th scope="col">username</th>
+      <th scope="col">email</th>
+      <th scope="col">firstName</th>
+      <th scope="col">lastName</th>
+      <th scope="col">bio</th>
+      <th scope="col">creadted_date</th>
+      <th scope="col">role</th>
+    </tr>
+    </thead>
+    <tbody>
+    <?php foreach($users as $user): ?>
+    <tr>
+        <td scope="col"><?=$user['idusers'];?></td>
+        <td scope="col"><?=$user['username'];?></td>
+        <td scope="col"><?=$user['email'];?></td>
+        <td scope="col"><?=$user['firstname'];?></td>
+        <td scope="col"><?=$user['lastname'];?></td>
+        <td scope="col"><?=$user['bio'];?></td>
+        <td scope="col"><?=$user['role'];?></td>
+        <td>
+            <a href="#"><i class="fas fa-edit"aria-hidden="true"></i></a>
+            <a href="#"><i class="fas fa-trash-alt"aria-hidden="true"></i></a>
+        </td>
+        </tr>
+    <?php endforeach?>
+    </tbody>
+    </table>
+    </div>
+    
